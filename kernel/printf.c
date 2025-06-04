@@ -32,10 +32,13 @@ printint(int xx, int base, int sign)
   int i;
   uint x;
 
-  if(sign && (sign = xx < 0))
-    x = -xx;
-  else
+  if(sign && xx < 0){
+    x = -(uint)xx;
+    sign = 1;
+  } else {
     x = xx;
+    sign = 0;
+  }
 
   i = 0;
   do {
