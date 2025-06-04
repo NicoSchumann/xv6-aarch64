@@ -22,7 +22,7 @@ printint(int fd, int xx, int base, int sgn)
   neg = 0;
   if(sgn && xx < 0){
     neg = 1;
-    x = -xx;
+    x = -(uint)xx;
   } else {
     x = xx;
   }
